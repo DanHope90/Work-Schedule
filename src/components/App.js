@@ -1,8 +1,15 @@
+import React from 'react';
+import HeaderComponent from '../components/headerComponent';
+import FormComponent from '../components/formComponent'
 import '../styles/App.css';
+import ListComponent from './listComponent';
 
 function App() {
   return (
-    <div className="App">Hello World!</div>
+    <>
+    <HeaderComponent />
+    <ListComponent/>
+    </>
   );
 }
 

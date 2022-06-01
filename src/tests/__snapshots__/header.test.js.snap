@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent render the header correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="header"
+  >
+    <h1>
+      Work Schedule
+    </h1>
+    <p>
+      A simple calender to schedule your workday
+    </p>
+    May 27th 2022, 3:12:53 pm
+  </div>
+</DocumentFragment>
+`;
