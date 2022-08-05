@@ -1,15 +1,21 @@
-import {useEffect, useState} from "react"
+import {useEffect, useState, useRef } from "react"
 import "../styles/form.css";
 
 function FormComponent (props) {
 
    const [addTask, setAddTask] = useState("");
 
+   const inputRef = useRef(null)
+
+   useEffect(() => {
+     inputRef.current.focus()
+   })
+
    const handleChange = (e) => {
      setAddTask(e.target.value)
    }
 
-   function handleSubmit (e) {
+   const handleSubmit = (e) => {
     e.preventDefault();
 
     props.onSubmit({
@@ -27,9 +33,9 @@ function FormComponent (props) {
     // }, [])
 
 
-    // useEffect(() => {
-    //   localStorage.setItem('taskText', JSON.stringify(addTask))
-    // }, [addTask])
+    useEffect(() => {
+      localStorage.setItem('taskText', JSON.stringify(addTask))
+    }, [addTask])
 
     // // useEffect(() => {
     // //   localStorage.setItem('tenAmText', JSON.stringify(tenAm))
@@ -39,13 +45,15 @@ function FormComponent (props) {
 
     return (
       <>
-      <form className="todo-input" onSubmit={handleSubmit}>
+      <form className="todo-form" onSubmit={handleSubmit}>
        <input 
+       className="todo-input"
         type="text"
-        value={addTask}
+        value={addTask }
         name='text'
         onChange={handleChange}
         placeholder="Type task here..."
+        ref={inputRef }
         />
         <button className="tod-button" type='submit' >Add</button>
       </form>

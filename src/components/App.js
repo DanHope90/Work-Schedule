@@ -1,6 +1,5 @@
 import React from 'react';
-import HeaderComponent from '../components/headerComponent';
-import FormComponent from '../components/formComponent'
+import HeaderComponent from './headerComponent';
 import '../styles/App.css';
 import ListComponent from './listComponent';
 

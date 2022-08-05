@@ -4,7 +4,8 @@ import PropType from "prop-types";
 
 function Header(date) {
 
-    return (<div className="header">
+    return (
+      <div className="header">
         <h1>Work Todo</h1>
         <p>A simple work todo schedule</p>
            Today {moment(date).format("MMMM Do YYYY")}
