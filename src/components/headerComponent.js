@@ -7,8 +7,8 @@ function Header(date) {
     return (
       <div className="header">
         <h1>Work Todo</h1>
-        <p>A simple work todo schedule</p>
-           Today {moment(date).format("MMMM Do YYYY")}
+        <p>A simple work todo task list</p>
+           {moment(date).format("MMMM Do YYYY")}
         </div>
     )
 }

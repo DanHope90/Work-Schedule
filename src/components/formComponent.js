@@ -49,13 +49,14 @@ function FormComponent (props) {
        <input 
        className="todo-input"
         type="text"
-        value={addTask }
+        value={addTask}
         name='text'
         onChange={handleChange}
         placeholder="Type task here..."
-        ref={inputRef }
+        ref={inputRef}
+        autoComplete='off'
         />
-        <button className="tod-button" type='submit' >Add</button>
+        <button className="todo-button" type='submit' >Add</button>
       </form>
     </>
   )  
